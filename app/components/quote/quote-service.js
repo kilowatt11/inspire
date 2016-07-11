@@ -6,8 +6,10 @@ function QuoteService(){
 	
 	this.getQuote =  function(callWhenDone){
 		$.get(apiUrl, function(res){
-			console.log('Quote Data:', res)
+			// console.log('Quote Data:', res)
 			//Now What?
+			var result = JSON.parse(res);
+			callWhenDone(result);
 		})
 	}
 }
