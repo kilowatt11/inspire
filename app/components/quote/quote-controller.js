@@ -5,7 +5,7 @@
 
 	quote.getQuote(function(quote){
 		console.log(quote.quote)
-		inspiration.append(`<h2 class="words"> ${quote.quote}</h2>`)
+		inspiration.append(`<h2 class="words"> \"${quote.quote}"\</h2>`)
 		$("#quote").attr('title', `${quote.author}`);
 
 	})
