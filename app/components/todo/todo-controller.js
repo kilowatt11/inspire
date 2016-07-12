@@ -7,14 +7,12 @@
 	$('form').on('submit', function (e) {
 		e.preventDefault();
 		
-
 		var form = this;
 		var input = form.toDoInput.value
 
 		todos.push(input)
 		console.log(todos)
 		toDo.saveTodos(todos)
-
 		update()
 	})
 
@@ -24,8 +22,8 @@
 		update()
 	})
 
+
 	$('#list').on('click','.item', function () {
-  
         var id = $(this).data('id')
         removeUserByName(id);
         update();
