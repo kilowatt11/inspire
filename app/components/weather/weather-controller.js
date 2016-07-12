@@ -4,9 +4,9 @@
 	var weatherService = new WeatherService();
 	
 	weatherService.getWeather(function(weather){
-		// console.log(weather.main.temp);
+		console.log(weather.weather[0].description);
 		var temp = toFahrenheit(weather.main.temp);
-		$('#weather').append(`<h2>${weather.name}</h2><h4> ${temp}&deg</h4>`)
+		$('#weather').append(`<h2>${weather.name}</h2><h4> ${temp}&deg</h4><h4> ${weather.weather[0].description}</h4>`)
 		//What can you do with this weather object?
 	})
 
