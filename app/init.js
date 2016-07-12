@@ -17,6 +17,9 @@ function normalTime(time){
     if(time > 13){
         return time - 12;
     }
+    if(time === 0){
+        return time + 12
+    }
 }
 startTime();
 
