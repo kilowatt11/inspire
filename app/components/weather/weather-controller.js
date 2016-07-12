@@ -11,7 +11,7 @@
 		$('#weather').append(`<h2>${weather.name}</h2><h3>Current Temp: ${temp}&deg<span id='temp-scale'>F</span></h3><p>H: ${max}&deg  L: ${min}&deg</p><h4> ${weather.weather[0].description}</h4>`)
 		//What can you do with this weather object?
 		$('#weather').on('click', 'h3',function(){
-			debugger;
+			
 			var scale = $('#temp-scale').text()
 			if(scale == 'F'){
 				temp = (temp - 32) * 9/5;
