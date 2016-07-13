@@ -28,14 +28,19 @@
         removeUserByName(id);
         update();
     })
+/*ANOTHER OPTION
+$('#list').on('click', 'li', function(event){
+	var task = $(event.target).text();
+})
 
+*/
 
     function removeUserByName(id) {
         
         for (var i = 0; i < todos.length; i++) {
             var item = todos[i];
             if (i == id) {
-                todos.splice(i, 1)
+                 todos.splice(i, 1)
             }
         }
 		toDo.saveTodos(todos)
