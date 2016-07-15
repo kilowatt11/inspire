@@ -4,6 +4,7 @@
 	var weatherService = new WeatherService();
 	
 	weatherService.getWeather(function(weather){
+		weather = JSON.parse(weather)
 		console.log(weather.weather[0].description);
 		var temp = toFahrenheit(weather.main.temp);
 		var max = toFahrenheit(weather.main.temp_max);
